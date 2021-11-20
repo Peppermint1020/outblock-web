@@ -14,7 +14,18 @@ jobs:
         node-version: [12.x]
     steps:
       - uses: actions/checkout@v2
-      - run: npm install & npm run build
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: clean cache
+        run: npm cache clean --force
+      - name: install
+        run: npm ci
+      - name: npm install
+        run: npm install
+      - name: build
+        run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
