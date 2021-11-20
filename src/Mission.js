@@ -9,7 +9,7 @@ import { Tiles } from '@rebass/layout';
 const Mission = () => {
 
   return (
-    <Flex sx={{ width: '100vw', height: '100vh', background: '#2F2F2F' }} flexDirection="column" >
+    <Flex sx={{ width: '100vw', height: '100vh', background: '#272727' }} flexDirection="column" >
       <Marquee />
       <Tiles sx={{ justifyContent: 'center', alignItems: 'center', height: '100%' }} columns={[1, null, 2]}>
         {/* <Flex sx={{ height: '100%', width: '80%', margin: '0 auto', display: 'block' }}> */}
