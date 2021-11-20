@@ -1,0 +1,40 @@
+.ring {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+  align-content: center;
+  position: absolute;
+}
+
+.first {
+  animation: rotateFirst 2s infinite;
+}
+
+.second {
+  animation: rotateSecond 3s infinite;
+  animation-delay: 0.3s;
+}
+
+.third {
+  animation: rotateThird 2s infinite;
+  animation-delay: 0.6s;
+}
+
+@keyframes rotateFirst {
+  100% {
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+}
+
+@keyframes rotateSecond {
+  100% {
+    transform: rotate3d(1, 0, 0, 180deg);
+  }
+}
+
+@keyframes rotateThird {
+  100% {
+    transform: rotate3d(1, 1, 0, 180deg);
+  }
+}

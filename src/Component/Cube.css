@@ -1,0 +1,87 @@
+/* keyframes for rotating animation */
+/* @keyframes spin {
+  from {
+    transform: rotate3d(0);
+  }
+  to {
+    transform: rotate3d(0, 1, 1, 360deg);
+  }
+} */
+
+@keyframes spin {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.wrapper {
+  /* height: 600px; */
+  /* margin-top: 150px; */
+  position: relative;
+  perspective: 800;
+  perspective-origin: 50% 20vmin;
+  user-select: none;
+  /* top: "50%"; */
+}
+
+/* cube wrapper */
+.cube {
+  position: relative;
+  margin: 0 auto;
+  width: 30vmin;
+  transform-style: preserve-3d;
+  animation: spin 6s infinite linear;
+  transition: all 1s linear;
+  /* transform-origin: center; */
+}
+
+/* outer cube */
+b {
+  position: absolute;
+  width: 30vmin;
+  height: 30vmin;
+  display: block;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  line-height: 30vmin;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "bungee inline";
+  text-transform: uppercase;
+  transition: all 1s linear;
+}
+b.back {
+  transform: translateZ(-15vmin) rotateY(180deg);
+}
+b.right {
+  transform: rotateY(-270deg) translateX(15vmin);
+  transform-origin: top right;
+}
+b.left {
+  transform: rotateY(270deg) translateX(-15vmin);
+  transform-origin: center left;
+}
+b.top {
+  transform: rotateX(-90deg) translateY(-15vmin);
+  transform-origin: top center;
+}
+b.bottom {
+  transform: rotateX(90deg) translateY(15vmin);
+  transform-origin: bottom center;
+}
+b.front {
+  transform: translateZ(15vmin);
+}
+
+/* hover transformations */
+/* .cube:hover {
+  top: 150px;
+} */
+
+.cube:hover b.top {
+  transform: translateZ(15vmin) rotateX(-210deg);
+  transform-origin: top center;
+}
