@@ -24,21 +24,21 @@ const Effect = (props) => {
     ctx.shadowColor = color;
     ctx.fillStyle = color;
     ctx.setTransform(1, -0.15, 0, 1, 0, -10);
-    ctx.fillText("Crypto", innerWidth / 2, innerHeight * 0.5 - 5);
+    ctx.fillText("Crypto", innerWidth / 2, innerHeight * 0.55 - 5);
 
     ctx.font = "8vmin Bungee Hairline";
     ctx.fillStyle = "color";
-    ctx.fillText("Let's get", innerWidth / 2, innerHeight * 0.4 - 5);
+    ctx.fillText("Let's get", innerWidth / 2, innerHeight * 0.45 - 5);
 
     ctx.font = "20vmin Bungee Outline";
     ctx.fillStyle = "white";
     ctx.shadowBlur = 30;
     ctx.shadowColor = color;
-    ctx.fillText("Crypto", innerWidth / 2, innerHeight * 0.5);
+    ctx.fillText("Crypto", innerWidth / 2, innerHeight * 0.55);
 
     ctx.font = "8vmin Bungee Hairline";
     ctx.fillStyle = "white";
-    ctx.fillText("Let's get", innerWidth / 2, innerHeight * 0.4);
+    ctx.fillText("Let's get", innerWidth / 2, innerHeight * 0.45);
 
     ctx.font = "18vmin Bungee Inline";
     ctx.shadowBlur = 30;
@@ -48,7 +48,7 @@ const Effect = (props) => {
     ctx.fillText(
       "Outblock",
       innerWidth / 2,
-      innerHeight * 0.6
+      innerHeight * 0.65
     );
 
     ctx.font = "2.5vmax Bungee";
@@ -59,7 +59,7 @@ const Effect = (props) => {
     ctx.fillText(
       "Follow us",
       innerWidth / 2,
-      innerHeight * 0.8
+      innerHeight * 0.9
     );
 
     ctx.textAlign = "center";
@@ -121,7 +121,7 @@ const Effect = (props) => {
     }
   }, [innerWidth, innerHeight]);
 
-  return <canvas style={{ position: 'absolute' }} ref={canvasRef} {...props} />
+  return <canvas style={{ position: 'absolute', top: '0' }} ref={canvasRef} {...props} />
 }
 
 export default Effect

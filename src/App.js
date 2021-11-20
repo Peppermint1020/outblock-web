@@ -25,7 +25,7 @@ const LogoButton = styled.div`
 `
 
 const Header = styled.div`
-  position: sticky;
+  position: fixed;
   top: 0;
   /* width: 100%; */
   z-index: 999;
@@ -57,7 +57,7 @@ const App = () => {
         <LogoButton>Out<br />block</LogoButton>
       </Header>
       <Flex flexDirection="column">
-        <Flex flexDirection="column" sx={{ height: 'calc(100vh - 118px)', justifyContent: 'flex-end', alignItems: 'center' }}>
+        <Flex flexDirection="column" sx={{ height: '100vh', justifyContent: 'flex-end', alignItems: 'center' }}>
           <Effect />
           <Flex sx={{
             justifyContent: 'center',
