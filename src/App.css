@@ -3,11 +3,16 @@ body {
 }
 
 .half_background {
-  background: linear-gradient(
-    to top,
-    rgba(109, 255, 104, 0.829) 30%,
-    transparent 30%
-  );
+  background: linear-gradient(to top, #00ff47 25%, transparent 25%);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
 }
 
 @keyframes glitch {

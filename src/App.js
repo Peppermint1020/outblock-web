@@ -7,8 +7,9 @@ import Mission from './Mission';
 import Team from './Team';
 import { Box, Button, Image, Heading, Text, Flex } from 'rebass';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faTwitter, faDiscord } from '@fortawesome/free-brands-svg-icons'
 import Footer from './Footer';
+import { Tiles } from '@rebass/layout';
 
 const LogoButton = styled.div`
   font-family: 'Bungee Inline';
@@ -33,49 +34,60 @@ const Header = styled.div`
 
 const App = () => {
 
+  // useEffect(() => {
+  //   library.add(fab)
+  // })
+
+  const socialLink = (icon, link) => {
+    return (
+      <Button
+        onClick={() => { window.open(link).focus() }}
+        sx={{
+          backgroundColor: 'transparent',
+          cursor: 'pointer',
+        }} >
+        <FontAwesomeIcon icon={icon} style={{ color: '#FFF500', fontSize: '5vmin', zIndex: 99 }} />
+      </Button>
+    );
+  }
+
   return (
     <div className="App">
       <Header>
         <LogoButton>Out<br />block</LogoButton>
       </Header>
       <Flex flexDirection="column">
-        <Box sx={{ height: '100vh' }}>
+        <Flex flexDirection="column" sx={{ height: 'calc(100vh - 118px)', justifyContent: 'flex-end', alignItems: 'center' }}>
           <Effect />
-          <Flex sx={{ justifyContent: 'center', bottom: '10%', alignSelf: 'flex-end' }}>
-            <FontAwesomeIcon sx={{ color: '#3fff00' }} color="#3fff00" icon={faCoffee} />
-            {/* <Button
-              onClick={(e) => { window.open('https://twitter.com/realoutblock').focus() }}
-              variant='outline'
-              color="#3fff00"
-              sx={{
-                backgroundColor: 'transparent',
-                borderStyle: 'solid',
-                borderWidth: '2px',
-                borderRadius: 0,
-                borderColor: '# 3fff00',
-                fontSize: '30px',
-                fontFamily: 'Bungee',
-                transform: 'matrix(1, -0.15, 0, 1, 0, -10)',
-                textShadow: '0px 0px 10px #3fff00',
-                boxShadow: '0px 0px 10px #3fff00',
-                shadowBlur: 30,
-                position: 'absolute',
-                cursor: 'pointer',
-                userSelect: 'none',
-                bottom: '20vh'
-              }} >
-              Get updates
-            </Button> */}
+          <Flex sx={{
+            justifyContent: 'center',
+            top: "80%",
+            transform: 'matrix(1, -0.15, 0, 1, 0, -10)',
+            textShadow: '0px 0px 10px #3fff00',
+            shadowBlur: 30,
+            position: 'absolute',
+            userSelect: 'none',
+          }}>
+
+            <Tiles columns={[1, null, 3]} sx={{ justifyItems: 'center', userSelect: 'none' }}>
+              {socialLink(faTwitter, 'https://twitter.com/realoutblock')}
+              {socialLink(faGithub, 'https://github.com/outblock')}
+              {socialLink(faDiscord, 'https://discord.gg/DtZkFTay2U')}
+            </Tiles>
+
           </Flex>
-        </Box>
+        </Flex>
       </Flex >
       <Flex sx={{ height: '100vh', width: '100vw' }}>
         <Mission />
       </Flex>
-      <Flex sx={{ height: '100vh', width: '100vw', margin: '0 auto' }}>
+      <Flex sx={{
+        minHeight: '80vh', width: '100vw', margin: '0 auto', display: 'block',
+        marginBottom: '10px'
+      }}>
         <Team />
       </Flex>
-      <Flex sx={{ height: '20vh', width: '100vw' }} >
+      <Flex sx={{ height: '20vh', width: '100vw', display: 'block' }} >
         <Footer />
       </Flex>
     </div >

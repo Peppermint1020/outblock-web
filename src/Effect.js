@@ -4,7 +4,9 @@ import UseWindowDimensions from './Dimension';
 const Effect = (props) => {
   const canvasRef = useRef(null)
 
-  const { width: innerWidth, height: innerHeight } = UseWindowDimensions();
+  var { width: innerWidth, height: innerHeight } = UseWindowDimensions();
+
+  innerHeight = innerHeight - 118;
 
   const colors = [
     "#b4b2b5",
@@ -22,21 +24,21 @@ const Effect = (props) => {
     ctx.shadowColor = color;
     ctx.fillStyle = color;
     ctx.setTransform(1, -0.15, 0, 1, 0, -10);
-    ctx.fillText("Crypto", innerWidth / 2, innerHeight * 0.4 - 5);
+    ctx.fillText("Crypto", innerWidth / 2, innerHeight * 0.5 - 5);
 
     ctx.font = "8vmin Bungee Hairline";
     ctx.fillStyle = "color";
-    ctx.fillText("Let's get", innerWidth / 2, innerHeight * 0.30 - 5);
+    ctx.fillText("Let's get", innerWidth / 2, innerHeight * 0.4 - 5);
 
     ctx.font = "20vmin Bungee Outline";
     ctx.fillStyle = "white";
     ctx.shadowBlur = 30;
     ctx.shadowColor = color;
-    ctx.fillText("Crypto", innerWidth / 2, innerHeight * 0.4);
+    ctx.fillText("Crypto", innerWidth / 2, innerHeight * 0.5);
 
     ctx.font = "8vmin Bungee Hairline";
     ctx.fillStyle = "white";
-    ctx.fillText("Let's get", innerWidth / 2, innerHeight * 0.3);
+    ctx.fillText("Let's get", innerWidth / 2, innerHeight * 0.4);
 
     ctx.font = "18vmin Bungee Inline";
     ctx.shadowBlur = 30;
@@ -46,10 +48,10 @@ const Effect = (props) => {
     ctx.fillText(
       "Outblock",
       innerWidth / 2,
-      innerHeight * 0.5
+      innerHeight * 0.6
     );
 
-    ctx.font = "4vmin Bungee";
+    ctx.font = "2.5vmax Bungee";
     ctx.shadowBlur = 30;
     ctx.shadowColor = "#00FF47";
     ctx.fillStyle = "#00FF47";
@@ -57,7 +59,7 @@ const Effect = (props) => {
     ctx.fillText(
       "Follow us",
       innerWidth / 2,
-      innerHeight * 0.7
+      innerHeight * 0.8
     );
 
     ctx.textAlign = "center";

@@ -3,14 +3,14 @@ import './Cube.css'
 
 const Cube = () => {
   return (
-    <div class="wrapper" style={{ top: '-10%' }}>
-      <div class="cube">
-        <b class="front">OutBlock</b>
-        <b class="back"></b>
-        <b class="top"></b>
-        <b class="bottom"></b>
-        <b class="left"></b>
-        <b class="right"></b>
+    <div className="wrapper" style={{ top: '-10%' }}>
+      <div className="cube">
+        <b className="front">OutBlock</b>
+        <b className="back"></b>
+        <b className="top"></b>
+        <b className="bottom"></b>
+        <b className="left"></b>
+        <b className="right"></b>
       </div>
     </div>
   );
