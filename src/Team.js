@@ -8,6 +8,8 @@ import avatar3 from './resources/avatar_2.png';
 import avatar4 from './resources/avatar_2_1.png';
 import avatar5 from './resources/avatar_3.png';
 import avatar6 from './resources/avatar_3_1.png';
+import avatar7 from './resources/avatar_4.png';
+import avatar8 from './resources/avatar_4_1.png';
 import useOnScreen from './Util/UseOnScreen.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faTwitter, faDiscord } from '@fortawesome/free-brands-svg-icons'
@@ -92,9 +94,10 @@ const Team = () => {
           <br />
           Our goal is bring more people to the <span className="half_background">crypto wonderland</span>.
         </Text>
-        <Tiles columns={[1, null, 3]} sx={{ justifyItems: 'center', userSelect: 'none' }}>
+        <Tiles columns={[1, 2, 4]} sx={{ justifyItems: 'center', userSelect: 'none' }}>
           {personCard(avatar, avatar2, "Hao", "Founder & Developer", "https://github.com/lmcmz")}
           {personCard(avatar3, avatar4, "Mandy", "BA & Developer", "https://github.com/meilixiaozhang")}
+          {personCard(avatar8, avatar7, "Han", "Senior Backend Developer", "https://github.com/zzggo")}
           {personCard(avatar5, avatar6, "Luca", "Senior Mobile Developer", "https://github.com/honeyluka")}
         </Tiles>
       </Flex>
