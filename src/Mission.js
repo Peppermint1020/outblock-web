@@ -23,7 +23,7 @@ const Mission = () => {
             <br />
             There are some many exciting and revolutional ideas sparkling inside of those blockchains.
             <br />
-            We aim to bring all those amazing things out of the block.
+            We aim to bring all those marvelous items out of the block.
             <br />
             Making the blockchain technology more accessible to everyone.
           </Text>
