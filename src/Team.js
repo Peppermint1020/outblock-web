@@ -14,6 +14,8 @@ import avatar9 from './resources/avatar_5.png';
 import avatar10 from './resources/avatar_5_1.png';
 import avatar11 from './resources/avatar_6_1.png';
 import avatar12 from './resources/avatar_6_2.png';
+import avatar13 from './resources/avatar_7_1.png';
+import avatar14 from './resources/avatar_7_2.png';
 import useOnScreen from './Util/UseOnScreen.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faTwitter, faDiscord } from '@fortawesome/free-brands-svg-icons'
@@ -86,7 +88,7 @@ const Team = () => {
       <Flex flexDirection='column'
         sx={{
           height: '100%',
-          width: '70%',
+          width: '80%',
           margin: '0 auto',
           justifyContent: 'center',
           // alignItems: 'center',
@@ -98,15 +100,16 @@ const Team = () => {
           <br />
           Our goal is bring more people to the <span className="half_background">crypto wonderland</span>.
         </Text>
-        <Tiles columns={[1, null, 3]} sx={{ justifyItems: 'center', userSelect: 'none' }}>
+        <Tiles columns={[1, null, 4]} sx={{ justifyItems: 'center', userSelect: 'none' }}>
           {personCard(avatar, avatar2, "Hao", "Founder & Developer", "https://github.com/lmcmz")}
           {personCard(avatar3, avatar4, "Mandy", "BA & Developer", "https://github.com/meilixiaozhang")}
           {personCard(avatar8, avatar7, "Han", "Senior Backend Developer", "https://github.com/zzggo")}
+          {personCard(avatar9, avatar10, "John", "Senior Android Developer", "https://github.com/john990")}
         </Tiles>
         <Tiles columns={[1, null, 3]} sx={{ justifyItems: 'center', userSelect: 'none' }}>
-          {personCard(avatar5, avatar6, "Luka", "Senior iOS Developer", "https://github.com/honeyluka")}
-          {personCard(avatar9, avatar10, "John", "Senior Android Developer", "https://github.com/john990")}
+          {personCard(avatar13, avatar14, "Zayn", "UX", "", false)}
           {personCard(avatar11, avatar12, "KK", "UX", "", false)}
+          {personCard(avatar5, avatar6, "Luka", "Senior iOS Developer", "https://github.com/honeyluka")}
         </Tiles>
       </Flex>
     </Flex>
