@@ -12,6 +12,8 @@ import avatar7 from './resources/avatar_4.png';
 import avatar8 from './resources/avatar_4_1.png';
 import avatar9 from './resources/avatar_5.png';
 import avatar10 from './resources/avatar_5_1.png';
+import avatar11 from './resources/avatar_6_1.png';
+import avatar12 from './resources/avatar_6_2.png';
 import useOnScreen from './Util/UseOnScreen.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faTwitter, faDiscord } from '@fortawesome/free-brands-svg-icons'
@@ -42,7 +44,7 @@ const Team = () => {
     target.onclick = ({ target }) => neonGlory(target);
   }, [isVisible])
 
-  const personCard = (img1, img2, name, position, github) => {
+  const personCard = (img1, img2, name, position, github, showGithub = true) => {
     return (
       <Flex flexDirection="column"
         borderWidth={1}
@@ -58,7 +60,7 @@ const Team = () => {
         <Heading color="white" fontFamily="Bungee" fontSize={[1, 3, 4]}  >{name} </Heading>
         <Heading color="white" fontFamily="Ubuntu" fontSize={[1, 2, 3]} >{position} </Heading>
         {/* <Heading color="white" fontFamily="Bungee" >Blablablablablablablablablablablablablablablablablabl </Heading> */}
-        {socialLink(faGithub, github)}
+        { showGithub? socialLink(faGithub, github) : <dev />}
       </Flex >
     );
   }
@@ -101,9 +103,10 @@ const Team = () => {
           {personCard(avatar3, avatar4, "Mandy", "BA & Developer", "https://github.com/meilixiaozhang")}
           {personCard(avatar8, avatar7, "Han", "Senior Backend Developer", "https://github.com/zzggo")}
         </Tiles>
-        <Tiles columns={[1, null, 2]} sx={{ justifyItems: 'center', userSelect: 'none' }}>
+        <Tiles columns={[1, null, 3]} sx={{ justifyItems: 'center', userSelect: 'none' }}>
           {personCard(avatar5, avatar6, "Luka", "Senior iOS Developer", "https://github.com/honeyluka")}
           {personCard(avatar9, avatar10, "John", "Senior Android Developer", "https://github.com/john990")}
+          {personCard(avatar11, avatar12, "KK", "UX", "", false)}
         </Tiles>
       </Flex>
     </Flex>
