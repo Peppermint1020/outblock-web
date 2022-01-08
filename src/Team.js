@@ -38,7 +38,7 @@ const Team = () => {
   const h1Ref = useRef(null)
   const isVisible = useOnScreen(h1Ref);
   const [display, setDisplay] = useState(false);
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
   // const headRef = useRef()
 
   useEffect(() => {
@@ -114,7 +114,7 @@ const Team = () => {
         <Tiles columns={[1, null, 3]} sx={{ justifyItems: 'center', userSelect: 'none' }}>
           {personCard(avatar13, avatar14, "Zayn", "UI & UX", "", false)}
           {personCard(avatar11, avatar12, "KK", "UI & UX", "", false)}
-          {show?<div>{personCard(avatar5, avatar6, "Luka", "Senior iOS Developer", "https://github.com/honeyluka")}</div>:null}
+          //{show?<div>{personCard(avatar5, avatar6, "Luka", "Senior iOS Developer", "https://github.com/honeyluka")}</div>:null}
           {personCard(avatar15,avatar16, "Zena","Intern","",false)}
         </Tiles>
       </Flex>
